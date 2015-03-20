@@ -1,0 +1,98 @@
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background-size: cover;
+}
+
+#title {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 10% 0;
+  font-size: 160px;
+}
+
+#countdown{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  padding: 12% 0;
+  font-size: 80px;
+}
+
+.episode-buttons{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s;
+  height: 150px;
+  width: 75%;
+  position: absolute;
+  top: 40%;
+  left: 16%;
+}
+.episode-buttons.open{
+  visibility: visible;
+  opacity: 1;
+}
+
+.clock{
+  visibility:hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s;
+}
+.clock.open{
+  visibility: visible;
+  opacity: 1;
+}
+
+.episode-selection{
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 5px solid;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 80px;
+  cursor: pointer;
+  width: 320px;
+  margin: 0 auto;
+}
+.episode-selection:hover{
+  border-color: white;
+  color: white;
+}
+
+.episode-selection.left{
+  float: left;
+}
+.episode-selection.right{
+  float: right;
+}
+#player{
+  position: relative; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  z-index: -100;
+  background-size: cover;
+}
+
+.wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  z-index: 100;
+}
+.cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0.0;
+  background: #f00;
+}
+
+/*Set the background to a jpg and hide video if on mobile*/
+@media screen and (max-device-width: 800px) {
+body { background-color: black; }
+#bgvid { display: none; }
+}
